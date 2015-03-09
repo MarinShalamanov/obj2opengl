@@ -407,13 +407,13 @@ sub loadData {
 			$ta_idx[$numFaces] = $a[1]-1;
 			$na_idx[$numFaces] = $a[2]-1;
 
-			$vb_idx[$numFaces] = $d[0]-1;
-			$tb_idx[$numFaces] = $d[1]-1;
-			$nb_idx[$numFaces] = $d[2]-1;
-
-			$vc_idx[$numFaces] = $c[0]-1;
-			$tc_idx[$numFaces] = $c[1]-1;
-			$nc_idx[$numFaces] = $c[2]-1;
+			$vb_idx[$numFaces] = $c[0]-1;
+			$tb_idx[$numFaces] = $c[1]-1;
+			$nb_idx[$numFaces] = $c[2]-1;
+			
+			$vc_idx[$numFaces] = $d[0]-1;
+			$tc_idx[$numFaces] = $d[1]-1;
+			$nc_idx[$numFaces] = $d[2]-1;
 
 			$face_line[$numFaces] = $line;
 
