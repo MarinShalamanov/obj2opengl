@@ -492,7 +492,7 @@ sub writeOutput {
 	print OUTFILE "unsigned int ".$object."NumVerts = ".($numFaces * 3).";\n\n";
 	
 	# write verts
-	print OUTFILE "float ".$object."Verts \[\] = {\n"; 
+	print OUTFILE "double\[\] ".$object."Verts = {\n"; 
 	for( $j = 0; $j < $numFaces; $j++)
 	{
 		$ia = fixedIndex($va_idx[$j], $numVerts);
@@ -507,7 +507,7 @@ sub writeOutput {
 	
 	# write normals
 	if($numNormals > 0) {
-		print OUTFILE "float ".$object."Normals \[\] = {\n"; 
+		print OUTFILE "double\[\] ".$object."Normals = {\n"; 
 		for( $j = 0; $j < $numFaces; $j++) {
 			$ia = fixedIndex($na_idx[$j], $numNormals);
 			$ib = fixedIndex($nb_idx[$j], $numNormals);
@@ -523,7 +523,7 @@ sub writeOutput {
 	
 	# write texture coords
 	if($numTexture) {
-		print OUTFILE "float ".$object."TexCoords \[\] = {\n"; 
+		print OUTFILE "double\[\] ".$object."TexCoords = {\n"; 
 		for( $j = 0; $j < $numFaces; $j++) {
 			$ia = fixedIndex($ta_idx[$j], $numTexture);
 			$ib = fixedIndex($tb_idx[$j], $numTexture);
